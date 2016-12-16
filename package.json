@@ -1,6 +1,13 @@
 {
-  "name": "NodeShop",
-  "version": "0.0.6",
+  "name": "fur495-site",
+  "version": "0.0.1",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "main": "shop.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "bcrypt": "*",
     "body-parser": "^1.15.2",
