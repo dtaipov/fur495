@@ -6,7 +6,7 @@
   },
   "main": "shop.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node shop.js"
   },
   "dependencies": {
     "bcrypt": "*",
