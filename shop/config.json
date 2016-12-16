@@ -1,0 +1,12 @@
+{
+    
+    "connection" : "postgres://lwaliurowjjlfc:wUcxQ5b3h7z3khHqGcDOikMGx1@ec2-54-243-249-165.compute-1.amazonaws.com:5432/db9b6uacnamm2e?ssl=true",
+    "cookie_secret" : "session secret",
+    
+    "store" : {
+        
+        "name" : "Fur495",
+        "tagline" : "Меховое ателье"
+    }
+    
+}

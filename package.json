@@ -1,0 +1,19 @@
+{
+  "name": "NodeShop",
+  "version": "0.0.6",
+  "dependencies": {
+    "bcrypt": "*",
+    "body-parser": "^1.15.2",
+    "connect-mongo": "*",
+    "cookie-parser": "^1.4.3",
+    "express": "*",
+    "jade": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "pg": "^6.1.2",
+    "querystring": "*",
+    "request": "*",
+    "underscore": "*"
+  }
+}
