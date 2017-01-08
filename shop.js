@@ -49,6 +49,14 @@ console.log('Connecting to database...');
     app.use(express.static(__dirname + '/shop/public'));
   
 //});
+
+app.get('/*', function (req, res, next) {
+    if (req.url.indexOf("/img/style/") != -1) {
+        console.log("HELLO: "  + req.url);
+        res.setHeader("Cache-Control", "public, max-age=2592000");
+    }
+    next();
+});
     
 // Require router, passing passport for authenticating pages
 require('./shop/router')(app, passport);
