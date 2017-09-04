@@ -1,16 +1,16 @@
 extends layout
-//block content
-  a(href="#").thumbnail
-    img(src="http://placehold.it/930x160", alt="")
-  hr
-  h4 Featured
-  ul.thumbnails
-      each product in featured
-        li.span3
-          a(href="/product/#{product.seo}").thumbnail
-            img(src="http://placehold.it/210x160", alt="")
-            h6 #{product.name}
-              p.pull-right £#{product.pricing.retail}
+block content
+  h1 Расчет стоимости опушки (В процессе разработки)
+  .row
+    .col-4
+      form
+        .form-group
+          label(for="width") Ширина
+          input#width.form-control
+        .form-group
+            label(for="height") Высота
+            input#height.form-control
+        button.btn.btn-primary Расчитать
 block scripts
   
   

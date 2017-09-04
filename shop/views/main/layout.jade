@@ -2,40 +2,25 @@ doctype html
 html(lang="en")
   head
     title #{store} | #{title}
-    link(href="/css/bootstrap.min.css", rel="stylesheet")
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
     link(href="/css/main.css", rel="stylesheet")
   body
     //.modal.hide.fade#modal
-    nav.navbar.navbar-default
-      .container-fluid
-        //.navbar-header
-          //a.navbar-brand(href="/")
-            //img(src="/img/style/fur495.jpg")
-        //.collapse.navbar-collapse
-        ul.nav.navbar-nav
-          li
-            a(href="/")
-                    img(src="/img/style/fur495.jpg" width=400)
-          li
-            a(href="/") Главная
-          li
-            a(href="/about") О нас
-          li
-            a(href="/services") Услуги
-          li
-            a(href="/contact") Контакты
-          //if (!locals.logged)
-            li
-              a(data-toggle="modal", data-target="#modal", href="/modals/register") Register
-            li
-              a(data-toggle="modal", data-target="#modal", href="/modals/login") Login
-          //else
-            li
-              a(href="/account/home") Account
-            li
-              a(href="/account/logout") Logout
-          //#cart
-            //include ../cart/cart
+    nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+      button.navbar-toggler.navbar-toggler-right(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      a.navbar-brand(href="/")
+        img(src="/img/style/fur495.jpg" width=200)
+      collapse.navbar-collapse(id="navbarNav")
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href="/") Главная
+          li.nav-item
+            a.nav-link(href="/about") О нас
+          li.nav-item
+            a.nav-link(href="/services") Услуги
+          li.nav-item
+            a.nav-link(href="/contact") Контакты
     .container
       //a(href="/")
         //img(src="/img/style/fur495.jpg")
@@ -51,6 +36,6 @@ html(lang="en")
         block content
       hr
     script(src="http://code.jquery.com/jquery.min.js", type="text/javascript")
-    script(src="/js/bootstrap.min.js", type="text/javascript")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js", integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn", crossorigin="anonymous")
     script(src="/js/controller/main.js")
     block scripts
