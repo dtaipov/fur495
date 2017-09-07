@@ -30,6 +30,7 @@ console.log('Connecting to database...');
     app.use(cookieParserWithSecrets);
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(bodyParser.json());
+    app.locals.env = process.env;
 
     // Set up sessions
     /*app.use(express.session({
