@@ -64,19 +64,21 @@ module.exports = {
   },
 
   getDoneOrders: function(req, res) {
-
-    //db.getTopCategories(function(err, categories) {
-      //if (err) {console.log(err)}
-
       res.render('main/done_orders', {
         store: config.store.name,
         title: 'Выполненные услуги',
         logged: req.isAuthenticated(),
         user: req.user
-        //cart: req.session.cart,
-        //categories: categories,
       });
-    //});
+  },
+
+  getEShops: function(req, res) {
+    res.render('main/e_shops', {
+      store: config.store.name,
+      title: 'Интернет-магазины',
+      logged: req.isAuthenticated(),
+      user: req.user
+    });
   },
 
   // Get contact page
