@@ -23,7 +23,7 @@ console.log('Connecting to database...');
     
     // Set up jade
     app.set('views', __dirname + '/shop/views');
-    app.set('view engine', 'jade');
+    app.set('view engine', 'pug');
     
     //app.use(express.favicon());
     var cookieParserWithSecrets = cookieParser('novanova');
