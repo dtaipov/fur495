@@ -1,13 +1,16 @@
 extend layout
 block content
     h3 Выполненные заказы
-    p 2017-09-06
-    p Енот Зеленый, крашеный из белого
-    p Количество: 2
-    p Цена: 7000
-    p Сумма: 14000
-    .row
-      .col-3
-        img(src="https://lh3.googleusercontent.com/-qCG67eyYzjQ/Wa-3KKOO7fI/AAAAAAAACg4/2J9ELCRHK0IomDYmhvnjKdwZDJIsVTGdACJoC/w265-h353-n/greenRaccoon.jpg")
-      .col-3
-        img(src="https://lh3.googleusercontent.com/-m-p8m-Wfcsw/Wa-3KL4pUlI/AAAAAAAACg4/QC7Qiw1n8dMVImQ3h3-RVTEHbyodWDtwACJoC/w265-h353-n/greenRaccoon2.jpg")
+    each doneOrder in doneOrders
+      p
+        | #{doneOrder.creation}
+        br
+        | #{doneOrder.name}
+        br
+        | Количество: #{doneOrder.quantity}
+        br
+        | Цена: #{doneOrder.price}
+      img(src=`${doneOrder.image_url}`)
+      //.col-3
+        //img(src="https://lh3.googleusercontent.com/-m-p8m-Wfcsw/Wa-3KL4pUlI/AAAAAAAACg4/QC7Qiw1n8dMVImQ3h3-RVTEHbyodWDtwACJoC/w265-h353-n/greenRaccoon2.jpg")
+      hr

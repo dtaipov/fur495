@@ -64,12 +64,15 @@ module.exports = {
   },
 
   getDoneOrders: function(req, res) {
+    db.getDoneOrders(function(err, doneOrders) {
       res.render('main/done_orders', {
         store: config.store.name,
         title: 'Выполненные услуги',
         logged: req.isAuthenticated(),
+        doneOrders: doneOrders,
         user: req.user
       });
+    });
   },
 
   getEShops: function(req, res) {
