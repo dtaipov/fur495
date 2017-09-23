@@ -1,7 +1,73 @@
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans");
+.footer-social-btns {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-social-btn {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(/img/sprite.png);
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  margin-top: 10px;
+  background-size: 338px 320px;
+}
+
+.footer-social-btn:hover {
+  opacity: 0.8;
+}
+
+.footer-social-btn--vk {
+  background-position: 0 0;
+}
+
+.footer-social-btn--facebook {
+  background-position: -32px 0;
+}
+
+.footer-social-btn--pinterest {
+  background-position: -64px 0;
+}
+
+.footer-social-btn--ok {
+  background-position: -96px 0;
+}
+
+.footer-social-btn--instagram {
+  background-position: -128px 0;
+}
+
+.footer-social-btn--twitter {
+  background-position: -160px 0;
+}
+
+.footer-social-btn--gplus {
+  background-position: -192px 0;
+}
+
+.footer-social-btn--mail {
+  background-position: -224px 0;
+}
+
+.footer-social-btn--youtube {
+  background-position: -256px 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
-  //background-color: #fff;
-  //background: url("stripe.png");
-  color: #242424;
-  font-family: 'Open Sans', sans-serif;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }

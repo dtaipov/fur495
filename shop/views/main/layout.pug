@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     title #{store} | #{title}
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
-    //link(href="/css/main.css", rel="stylesheet")
+    link(href="/css/main.css", rel="stylesheet")
     if env.NODE_ENV === "production"
         <!-- Yandex.Metrika counter -->
         script.
@@ -57,6 +57,8 @@ html(lang="en")
           li.nav-item
             a.nav-link(href="/services") Услуги
           li.nav-item
+            a.nav-link(href="/e_shops") Интернет-магазины
+          li.nav-item
             a.nav-link(href="/done_orders") Выполненные заказы
           li.nav-item
             a.nav-link(href="/contact") Контакты
@@ -73,7 +75,14 @@ html(lang="en")
             input.search-query(type="text", placeholder="Search")
       .main
         block content
-      hr
+    footer.footer
+      .container
+        .footer-social-btns
+          a.footer-social-btn.footer-social-btn--vk(target="_blank", title="", href="https://vk.com/fur495")
+          a.footer-social-btn.footer-social-btn--facebook(target="_blank", title="", href="https://www.facebook.com/fur495/")
+          a.footer-social-btn.footer-social-btn--pinterest(target="_blank", title="", href="https://ru.pinterest.com/dmitrytaipov/fur495-products/")
+          a.footer-social-btn.footer-social-btn--instagram(target="_blank", title="", href="https://www.instagram.com/fur495")
+          a.footer-social-btn.footer-social-btn--gplus(target="_blank", title="", href="https://plus.google.com/+Fur495Ru")
     script(src="tether/js/tether.min.js")
     script(src="https://code.jquery.com/jquery-3.1.1.slim.min.js", integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n", crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js", integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb", crossorigin="anonymous")

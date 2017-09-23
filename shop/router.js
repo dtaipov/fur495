@@ -21,6 +21,7 @@ module.exports = function(a, p) {
     a.get('/', main.getHome);
     a.get('/about', main.getAbout);
     a.get('/services', main.getServices);
+    a.get('/e_shops', main.getEShops);
     a.get('/done_orders', main.getDoneOrders);
     a.get('/contact', main.getContact);
 

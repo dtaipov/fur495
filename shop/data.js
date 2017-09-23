@@ -13,6 +13,8 @@ passport.use(new LocalStrategy({usernameField: 'email'},function(email, password
 passport.serializeUser(function(user, done) {done(null, user.id)});
 passport.deserializeUser(function(id, done) {User.findById(id, function (err, user) {done(err, user)})});
 
+const db = require('../db').db;
+
 // Export functions
 module.exports = {
 
@@ -46,6 +48,18 @@ module.exports = {
 
         callback(null, categories);
     },
+
+  getDoneOrders: function(callback) {
+    db.products.done_orders()
+      .then((data) => {
+          console.log("done_orders", data);
+          callback(null, data);
+        })
+      .catch((error) => {
+        console.error(error);
+        callback(error);
+      });
+  },
   
     // Get featured products
     getFeatured: function(callback) {
