@@ -63,8 +63,8 @@ module.exports = {
     });
   },
 
-  getDoneOrders: function(req, res) {
-    db.getDoneOrders(function(err, doneOrders) {
+  getDoneOrders: (req, res) => {
+    db.getDoneOrders((err, doneOrders) => {
       res.render('main/done_orders', {
         store: config.store.name,
         title: 'Выполненные услуги',

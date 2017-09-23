@@ -1,21 +1,21 @@
 // Require express
-var express = require('express');
+const express = require('express');
 // Set up express
-var app = express();
+const app = express();
 // Require mongostore session storage
 //var mongoStore = require('connect-mongo')(express);
-var passport = require('passport');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 // Require needed files
-var database = require('./shop/data');
-var config = require('./shop/config.json');
-var info = require('./package.json');
+//const database = require('./shop/data');
+const config = require('./shop/config.json');
+const info = require('./package.json');
 
 console.log('NodeShop Started!');
 
 // Connect to database
-database.startup(config.connection);
+//database.startup(config.connection);
 console.log('Connecting to database...');
   
 // Configure Express
@@ -26,7 +26,7 @@ console.log('Connecting to database...');
     app.set('view engine', 'pug');
     
     //app.use(express.favicon());
-    var cookieParserWithSecrets = cookieParser('novanova');
+    const cookieParserWithSecrets = cookieParser('novanova');
     app.use(cookieParserWithSecrets);
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(bodyParser.json());
@@ -55,7 +55,7 @@ console.log('Connecting to database...');
 require('./shop/router')(app, passport);
 
 // Listen for requests
-var port = process.env.PORT || 5001;
+const port = process.env.PORT || 5001;
 app.listen(port);
 
 console.log('NodeShop v' + info.version + ' listening on port ' + port);

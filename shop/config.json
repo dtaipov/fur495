@@ -1,6 +1,4 @@
 {
-    
-    "connection" : "postgres://obvzbtuijvlfqt:9b835a6f1c0ceafea82a3b22c7ba5d64b734eca24698d9a350a76362fc317775@ec2-54-243-249-165.compute-1.amazonaws.com:5432/db9b6uacnamm2e?ssl=true",
     "cookie_secret" : "session secret",
     
     "store" : {
