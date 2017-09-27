@@ -1,17 +1,16 @@
 extends layout
 block content
-  h3 #{title}
-  h5 #{__("Caption_Calculation_Of_Fur_Strap_Price")} (#{__("Caption_In_Development")})
+  h3 #{__("Caption_Calculation_Of_Fur_Strap_Price")} (#{__("Caption_In_Development")})
   .row
     .col-4
       form
         .form-group
-          label(for="width") Ширина
+          label(for="width") #{__("Strap_Calculation_Width")}
           input#width.form-control
         .form-group
-            label(for="height") Высота
+            label(for="height") #{__("Strap_Calculation_Length")}
             input#height.form-control
-        button.btn.btn-primary Расчитать
+        button.btn.btn-primary #{__("Strap_Calculation_Calculate")}
 block scripts
   
   
