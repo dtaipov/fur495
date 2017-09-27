@@ -1,5 +1,17 @@
 extend layout
 block content
   h3 #{title}
-  //p.lead
-  | Качественный и профессиональный пошив. С нами работают только опытные мастера и скорняки (стаж более 20 лет). Оперативная работа и соблюдение установленных сроков. Индивидуальный подход. У нас можно выбрать готовые шубы и аксессуары, сшить любую модель на заказ, отреставрировать или перешить любимые вещи.
+  if locale === "ru"
+    | Качественный и профессиональный пошив.
+    | С нами работают только опытные мастера и скорняки (стаж более 20 лет).
+    | Оперативная работа и соблюдение установленных сроков. Индивидуальный подход.
+    | У нас можно выбрать готовые шубы и аксессуары, сшить любую модель на заказ, отреставрировать или перешить любимые вещи.
+  else
+    | We are fur studio in Dolgoprudny, Russia.
+    br
+    | We make accessories and outwear from real fur.
+    br
+    | We love what we do, because good and pretty clothing makes people feel different. So we make the world a little bit more beautiful and happy.
+    br
+    | We are really fond of online shopping too, where buyers can see all the products from different sellers at once and choose the exact product they need. And where buyers can communicate with manufacturers directly without any mediators.
+
