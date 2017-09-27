@@ -1,6 +1,6 @@
 extend layout
 block content
-    h3 Выполненные заказы
+    h3 #{title}
     each doneOrder in doneOrders
       p
         | #{doneOrder.creation}
