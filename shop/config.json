@@ -1,9 +1,3 @@
 {
-    "cookie_secret" : "session secret",
-    
-    "store" : {
-        "name" : "Fur495",
-        "tagline" : "Меховое ателье"
-    }
-    
+    "cookie_secret" : "session secret"
 }
