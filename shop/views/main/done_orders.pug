@@ -6,8 +6,8 @@ block content
         | #{doneOrder.creation}
         br
         | #{doneOrder.name}
-        br
-        | Количество: #{doneOrder.quantity}
+        //-br
+        //-| Количество: #{doneOrder.quantity}
         br
         | Цена: #{doneOrder.money_amount}
       img(src=`${doneOrder.image_url}`, class="img-fluid rounded")
