@@ -49,19 +49,21 @@ html(lang="en")
         span(style="color:purple") 9
         span(style="color:red") 5
       collapse.navbar-collapse(id="navbarNav")
-        ul.navbar-nav
+        ul.navbar-nav.mr-auto
           li.nav-item
-            a.nav-link(href="/") Главная
+            a.nav-link(href="/") #{__("Menu_Main")}
           li.nav-item
-            a.nav-link(href="/about") О нас
+            a.nav-link(href="/about") #{__("Menu_About_Us")}
           li.nav-item
-            a.nav-link(href="/services") Услуги
+            a.nav-link(href="/services") #{__("Menu_Services")}
           li.nav-item
-            a.nav-link(href="/e_shops") Интернет-магазины
+            a.nav-link(href="/e_shops") #{__("Menu_Online_Shops")}
           li.nav-item
-            a.nav-link(href="/done_orders") Выполненные заказы
+            a.nav-link(href="/done_orders") #{__("Menu_Done_Orders")}
           li.nav-item
-            a.nav-link(href="/contact") Контакты
+            a.nav-link(href="/contact") #{__("Menu_Contacts")}
+
+        a.nav-link(href="#", id="languageSwitch" style="text-transform: uppercase;") #{locale}
     .container
       //a(href="/")
         //img(src="/img/style/fur495.jpg")
@@ -87,5 +89,32 @@ html(lang="en")
     script(src="https://code.jquery.com/jquery-3.1.1.slim.min.js", integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n", crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js", integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb", crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js", integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn", crossorigin="anonymous")
+    script.
+      function getCookie(cname) {
+        const name = cname + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      $(document).ready(function() {
+        $('#languageSwitch').click(function () {
+          var lang = 'EN';
+          if ($(this).text().toUpperCase() === 'EN') {
+            lang = 'RU';
+          }
+          $(this).text(lang);
+          document.cookie = "smm_locale=" + lang.toLocaleLowerCase();
+          location.reload();
+        });
+      });
     //script(src="/js/controller/main.js")
     block scripts
