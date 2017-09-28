@@ -23,6 +23,7 @@ module.exports = function(a, p) {
     a.get('/services', main.getServices);
     a.get('/e_shops', main.getEShops);
     a.get('/done_orders', main.getDoneOrders);
+    a.get('/faq', main.getFAQ);
     a.get('/contact', main.getContact);
 
     // Modal routes

@@ -50,5 +50,13 @@ module.exports = {
       logged: req.isAuthenticated(),
       user: req.user,
     });
+  },
+
+  getFAQ: (req, res) => {
+    res.render('main/faq', {
+      title: req.__("Menu_FAQ"),
+      logged: req.isAuthenticated(),
+      user: req.user,
+    });
   }
 };
