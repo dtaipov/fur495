@@ -23,4 +23,4 @@ where
  d.active = TRUE and
  d.document_type_id = 4
 order by d.id desc
-limit 10
+limit 20
