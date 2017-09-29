@@ -6,7 +6,8 @@
   },
   "main": "shop.js",
   "scripts": {
-    "start": "node shop.js"
+    "start": "node shop.js",
+    "push": "git push heroku master"
   },
   "dependencies": {
     "bcrypt": "*",
