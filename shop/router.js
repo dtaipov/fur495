@@ -1,44 +1,44 @@
 // Require routes
-var account = require('./routes/account');
-var main = require('./routes/main');
-var modals = require('./routes/modals');
-var product = require('./routes/product');
-var cart = require('./routes/cart');
-var category = require('./routes/category');
-var checkout = require('./routes/checkout');
+//var account = require('./routes/account');
+const main = require('./routes/main');
+//var modals = require('./routes/modals');
+//var product = require('./routes/product');
+//var cart = require('./routes/cart');
+//var category = require('./routes/category');
+//var checkout = require('./routes/checkout');
 
 // Function to only allow acess if authenticated
-function ensureAuthenticated(req, res, next) {
+/*function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) { return next(); }
     // Redirect if not authenticated
     res.redirect('/account/login');
-}
+}*/
 
 // Export routes
 module.exports = function(a, p) {
 
     // Main routes
-    a.get('/', main.getHome);
-    a.get('/about', main.getAbout);
-    a.get('/services', main.getServices);
-    a.get('/e_shops', main.getEShops);
-    a.get('/done_orders', main.getDoneOrders);
-    a.get('/faq', main.getFAQ);
-    a.get('/contact', main.getContact);
+    a.get('/:locale', main.getHome);
+    a.get('/:locale/about', main.getAbout);
+    a.get('/:locale/services', main.getServices);
+    a.get('/:locale/e_shops', main.getEShops);
+    a.get('/:locale/done_orders', main.getDoneOrders);
+    a.get('/:locale/faq', main.getFAQ);
+    a.get('/:locale/contact', main.getContact);
 
     // Modal routes
-    a.get('/modals/register', modals.getRegister);
-    a.get('/modals/login', modals.getLogin);
-    a.get('/modals/terms', modals.getTerms);
+    //a.get('/modals/register', modals.getRegister);
+    //a.get('/modals/login', modals.getLogin);
+    //a.get('/modals/terms', modals.getTerms);
     
     // Account routes
-    a.get('/account/home', ensureAuthenticated, account.getAccount);
-    a.post('/account/register', account.postRegister);
-    a.get('/account/logout', account.getLogout);
-    a.get('/account/registered', account.getRegistered);
+    //a.get('/account/home', ensureAuthenticated, account.getAccount);
+    //a.post('/account/register', account.postRegister);
+    //a.get('/account/logout', account.getLogout);
+    //a.get('/account/registered', account.getRegistered);
     
     // Passport login function
-    a.post('/account/login', function(req, res, next) {
+    /*a.post('/account/login', function(req, res, next) {
         p.authenticate('local', function(err, user, info) {
             if (err){return next(err);} 
             
@@ -70,6 +70,6 @@ module.exports = function(a, p) {
     a.get('/checkout/guest', checkout.getGuest);
     a.post('/checkout/guest', checkout.postGuest);
     a.get('/checkout/order', checkout.getOrder);
-    a.post('/checkout/order', checkout.postOrder);
+    a.post('/checkout/order', checkout.postOrder);*/
     
 };

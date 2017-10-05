@@ -5,6 +5,8 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     meta(name="description", content=__("Description"))
     title Fur495 | #{title}
+    link(rel="alternate", hreflang="ru", href="http://fur495.ru/ru")
+    link(rel="alternate", hreflang="en", href="http://fur495.ru/en")
     link(rel="icon", href="/favicon.ico", type="image/x-icon")
     link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
@@ -39,12 +41,10 @@ html(lang="en")
             img(src="https://mc.yandex.ru/watch/45872025", style="position:absolute; left:-9999px;", alt="")
         <!--/Yandex.Metrika counter -->
   body
-    //.modal.hide.fade#modal
     nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
       button.navbar-toggler.navbar-toggler-right(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
         span.navbar-toggler-icon
       a.navbar-brand(href="/")
-        //img(src="/img/style/fur495.jpg", height="50")
         span(style="color:red") F
         span(style="color:orange") u
         span(style="color:green") r
@@ -54,32 +54,22 @@ html(lang="en")
       collapse.navbar-collapse(id="navbarNav")
         ul.navbar-nav.mr-auto
           li.nav-item
-            a.nav-link(href="/") #{__("Menu_Main")}
+            a.nav-link(href="/" + locale + "/") #{__("Menu_Main")}
           li.nav-item
-            a.nav-link(href="/about") #{__("Menu_About_Us")}
+            a.nav-link(href="/" + locale + "/about") #{__("Menu_About_Us")}
           li.nav-item
-            a.nav-link(href="/services") #{__("Menu_Services")}
+            a.nav-link(href="/" + locale + "/services") #{__("Menu_Services")}
           li.nav-item
-            a.nav-link(href="/e_shops") #{__("Menu_Online_Shops")}
+            a.nav-link(href="/" + locale + "/e_shops") #{__("Menu_Online_Shops")}
           li.nav-item
-            a.nav-link(href="/done_orders") #{__("Menu_Done_Orders")}
+            a.nav-link(href="/" + locale + "/done_orders") #{__("Menu_Done_Orders")}
           li.nav-item
-            a.nav-link(href="/faq") FAQ
+            a.nav-link(href="/" + locale + "/faq") FAQ
           li.nav-item
-            a.nav-link(href="/contact") #{__("Menu_Contacts")}
+            a.nav-link(href="/" + locale + "/contact") #{__("Menu_Contacts")}
 
-        a.nav-link(href="#", id="languageSwitch" style="text-transform: uppercase;") #{locale}
+        a.nav-link(href="/" + locale_opposite + path, id="languageSwitch" style="text-transform: uppercase;") #{locale_opposite}
     .container
-      //a(href="/")
-        //img(src="/img/style/fur495.jpg")
-      //-.navbar
-        .navbar-inner
-          ul.nav
-            each category in categories
-              li
-                a(href="/category/#{category.seo}") #{category.name}
-          form.navbar-search.pull-right
-            input.search-query(type="text", placeholder="Search")
       .main
         block content
     footer.footer
@@ -94,32 +84,4 @@ html(lang="en")
     script(src="https://code.jquery.com/jquery-3.1.1.slim.min.js", integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n", crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js", integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb", crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js", integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn", crossorigin="anonymous")
-    script.
-      function getCookie(cname) {
-        const name = cname + "=";
-        const decodedCookie = decodeURIComponent(document.cookie);
-        const ca = decodedCookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) === ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) === 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
-      }
-      $(document).ready(function() {
-        $('#languageSwitch').click(function () {
-          var lang = 'EN';
-          if ($(this).text().toUpperCase() === 'EN') {
-            lang = 'RU';
-          }
-          $(this).text(lang);
-          document.cookie = "smm_locale=" + lang.toLocaleLowerCase();
-          location.reload();
-        });
-      });
-    //script(src="/js/controller/main.js")
     block scripts

@@ -10,7 +10,6 @@ const info = require('./package.json');
 i18n.configure({
   locales: ['en', 'ru'],
   defaultLocale: 'en',
-  cookie: 'smm_locale',
   directory: __dirname + '/locales'
 });
   
@@ -32,11 +31,24 @@ app.use(passport.session());
 
 // Define public assets
 app.use(express.static(__dirname + '/shop/public'));
+app.use("/ru", express.static(__dirname + '/shop/public'));
+app.use("/en", express.static(__dirname + '/shop/public'));
 app.use(i18n.init);
-  
 //});
-    
-// Require router, passing passport for authenticating pages
+
+app.get('/', (req, res, next) => {
+  res.redirect(`/${req.getLocale()}/`);
+});
+
+app.use("/:locale", (req, res, next) => {
+  const locale = req.params.locale === "ru" ? "ru" : "en"; //in case of unsupported url such as /fr/about
+  res.setLocale(locale);
+  res.locals.locale_opposite = (locale === "ru" ? "en" : "ru");
+  res.locals.path = req.path;
+  next();
+});
+
+
 require('./shop/router')(app, passport);
 
 // Listen for requests
