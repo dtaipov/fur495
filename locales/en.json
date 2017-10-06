@@ -2,6 +2,7 @@
   "Menu_Main": "Main",
   "Menu_About_Us": "About us",
   "Menu_Services": "Services",
+  "Menu_Catalog": "Fur catalog",
   "Menu_Online_Shops": "Online shops",
   "Menu_Done_Orders": "Done orders",
   "Menu_FAQ": "Frequently asked questions",
@@ -34,5 +35,7 @@
   "Caption_In_Development": "In development",
   "Fur_Atelier": "Fur atelier",
   "Contacts_Address": "9 Nagornaya street, Office 2, Dolgoprudny, Moscow region, Russia, 141702",
-  "Contacts_Phone": "Phone"
+  "Contacts_Phone": "Phone",
+  "Catalog_Finnish_Fox": "Finnish fox",
+  "Catalog_Russian_Fox": "Russian fox"
 }

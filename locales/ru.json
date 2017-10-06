@@ -2,6 +2,7 @@
   "Menu_Main": "Главная",
   "Menu_About_Us": "О нас",
   "Menu_Services": "Услуги",
+  "Menu_Catalog": "Каталог меха",
   "Menu_Online_Shops": "Интернет-магазины",
   "Menu_Done_Orders": "Выполненные заказы",
   "Menu_FAQ": "Часто задаваемые вопросы",
@@ -34,5 +35,7 @@
   "Caption_In_Development": "В процессе разработки",
   "Fur_Atelier": "Меховое ателье",
   "Contacts_Address": "Нагорная 9, офис 2, г. Долгопрудный, Московская область, Россия, 141702",
-  "Contacts_Phone": "Телефон"
+  "Contacts_Phone": "Телефон",
+  "Catalog_Finnish_Fox": "Финский песец",
+  "Catalog_Russian_Fox": "Российский песец"
 }

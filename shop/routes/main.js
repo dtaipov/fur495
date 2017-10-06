@@ -25,6 +25,14 @@ module.exports = {
     });
   },
 
+  getCatalog: (req, res) => {
+    res.render('main/catalog', {
+      title: req.__("Menu_Catalog"),
+      logged: req.isAuthenticated(),
+      user: req.user,
+    });
+  },
+
   getDoneOrders: (req, res) => {
     db.getDoneOrders((err, doneOrders) => {
       res.render('main/done_orders', {
