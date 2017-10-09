@@ -54,7 +54,6 @@ module.exports = {
 
   getContact: (req, res) => {
     res.render('main/contact', {
-      title: req.__("Menu_Contacts"),
       logged: req.isAuthenticated(),
       user: req.user,
     });
