@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     meta(name="description", content=__("Description"))
-    title Fur495 | #{title}
+    title Fur495 | #{__("Menu_" + path)}
     link(rel="alternate", hreflang="ru", href="http://fur495.ru/ru")
     link(rel="alternate", hreflang="en", href="http://fur495.ru/en")
     link(rel="icon", href="/favicon.ico", type="image/x-icon")
@@ -54,21 +54,21 @@ html(lang="en")
       collapse.navbar-collapse(id="navbarNav")
         ul.navbar-nav.mr-auto
           li.nav-item
-            a.nav-link(href="/" + locale + "/") #{__("Menu_Main")}
+            a.nav-link(href="/" + locale + "/") #{__("Menu_/")}
           li.nav-item
-            a.nav-link(href="/" + locale + "/about") #{__("Menu_About_Us")}
+            a.nav-link(href="/" + locale + "/about") #{__("Menu_/about")}
           li.nav-item
-            a.nav-link(href="/" + locale + "/services") #{__("Menu_Services")}
+            a.nav-link(href="/" + locale + "/services") #{__("Menu_/services")}
           li.nav-item
-            a.nav-link(href="/" + locale + "/catalog") #{__("Menu_Catalog")}
+            a.nav-link(href="/" + locale + "/catalog") #{__("Menu_/catalog")}
           li.nav-item
-            a.nav-link(href="/" + locale + "/e_shops") #{__("Menu_Online_Shops")}
+            a.nav-link(href="/" + locale + "/e_shops") #{__("Menu_/e_shops")}
           li.nav-item
-            a.nav-link(href="/" + locale + "/done_orders") #{__("Menu_Done_Orders")}
+            a.nav-link(href="/" + locale + "/done_orders") #{__("Menu_/done_orders")}
           li.nav-item
-            a.nav-link(href="/" + locale + "/faq") FAQ
+            a.nav-link(href="/" + locale + "/faq") #{__("Menu_/faq")}
           li.nav-item
-            a.nav-link(href="/" + locale + "/contact") #{__("Menu_Contacts")}
+            a.nav-link(href="/" + locale + "/contact") #{__("Menu_/contact")}
 
         a.nav-link(href="/" + locale_opposite + path, id="languageSwitch" style="text-transform: uppercase;") #{locale_opposite}
     .container
