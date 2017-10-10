@@ -1,16 +1,20 @@
 extends layout
 block content
-  h3 #{__("Caption_Calculation_Of_Fur_Strap_Price")} (#{__("Caption_In_Development")})
-  .row
-    .col-4
-      form
-        .form-group
-          label(for="width") #{__("Strap_Calculation_Width")}
-          input#width.form-control
-        .form-group
-            label(for="height") #{__("Strap_Calculation_Length")}
-            input#height.form-control
-        button.btn.btn-primary #{__("Strap_Calculation_Calculate")}
+  h1 #{__("Menu_" + path)}
+  .carousel.slide(id="carouselControls", data-ride="carousel")
+    .carousel-inner(role="listbox")
+      .carousel-item.active
+        img.d-block.img-fluid(src="https://instagram.fiev2-1.fna.fbcdn.net/t51.2885-15/e15/11254101_707966339326702_836534747_n.jpg", alt="First slide")
+      .carousel-item
+        img.d-block.img-fluid(src="https://instagram.fiev2-1.fna.fbcdn.net/t51.2885-15/e15/11230441_1596703113910902_313958600_n.jpg", alt="Second slide")
+      .carousel-item
+        img.d-block.img-fluid(src="https://instagram.fiev2-1.fna.fbcdn.net/t51.2885-15/e15/11189959_394015510790318_86800812_n.jpg", alt="Third slide")
+    a.carousel-control-prev(href="#carouselControls", role="button", data-slide="prev")
+      span.carousel-control-prev-icon(aria-hidden="true")
+      span.sr-only Previous
+    a.carousel-control-next(href="#carouselControls", role="button", data-slide="next")
+      span.carousel-control-next-icon(aria-hidden="true")
+      span.sr-only  Next
 block scripts
   
   
