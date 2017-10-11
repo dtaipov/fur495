@@ -23,9 +23,12 @@ module.exports = {
   },
 
   getCatalog: (req, res) => {
-    res.render('main/catalog', {
-      logged: req.isAuthenticated(),
-      user: req.user,
+    db.getCatalogAll((err, products) => {
+      res.render('main/catalog', {
+        logged: req.isAuthenticated(),
+        products,
+        user: req.user,
+      });
     });
   },
 

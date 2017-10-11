@@ -49,12 +49,24 @@ module.exports = {
         callback(null, categories);
     },
 
-  getDoneOrders: function(callback) {
+  getDoneOrders: (callback) => {
     db.products.done_orders()
       .then((data) => {
           console.log("done_orders", data);
           callback(null, data);
         })
+      .catch((error) => {
+        console.error(error);
+        callback(error);
+      });
+  },
+
+  getCatalogAll: (callback) => {
+    db.products.catalog_all()
+      .then((data) => {
+        console.log("catalog all", data);
+        callback(null, data);
+      })
       .catch((error) => {
         console.error(error);
         callback(error);

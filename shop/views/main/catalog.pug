@@ -1,6 +1,18 @@
 extend layout
 block content
   h1 #{__("Menu_" + path)}
+  ul.nav
+    li.nav-item
+      a.nav-link.active(href="#") Песец
+    li.nav-item
+      a.nav-link(href="#") Енотовидная собака
+  each product in products
+    p
+      | #{product.name}
+      br
+      | Цена: #{product.price}
+    img(src=`${product.image_url}`, class="img-fluid rounded")
+    hr
   br
   h3 #{__("Catalog_Finnish_Fox")}
   .row
