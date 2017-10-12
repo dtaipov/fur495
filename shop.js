@@ -41,6 +41,9 @@ app.get('/', (req, res, next) => {
 });
 
 app.use("/:locale", (req, res, next) => {
+  if (req.params.locale !== "ru" && req.params.locale !== "en") {
+    res.status(404).send('Not found');
+  }
   const locale = req.params.locale === "ru" ? "ru" : "en"; //in case of unsupported url such as /fr/about
   res.setLocale(locale);
   res.locals.locale_opposite = (locale === "ru" ? "en" : "ru");
