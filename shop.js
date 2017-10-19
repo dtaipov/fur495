@@ -42,7 +42,7 @@ app.get('/', (req, res, next) => {
 
 app.use("/:locale", (req, res, next) => {
   if (req.params.locale !== "ru" && req.params.locale !== "en") {
-    return res.status(404).send('Not found');
+    return res.sendStatus(404);
   }
   const locale = req.params.locale === "ru" ? "ru" : "en"; //in case of unsupported url such as /fr/about
   res.setLocale(locale);
@@ -51,8 +51,12 @@ app.use("/:locale", (req, res, next) => {
   next();
 });
 
-
 require('./shop/router')(app, passport);
+
+app.use((req, res) => {
+  res.sendStatus(404);
+});
+
 
 // Listen for requests
 const port = process.env.PORT || 5001;
