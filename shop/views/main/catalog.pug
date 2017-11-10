@@ -3,9 +3,11 @@ block content
   h1 #{__("Menu_" + path)}
   ul.nav
     li.nav-item
-      a.nav-link.active(href="#") Песец
+      a.nav-link.active(href="/"+locale+"/catalog/finnishFox/") #{__("Menu_/catalog/finnishFox/")}
     li.nav-item
-      a.nav-link(href="#") Енотовидная собака
+      a.nav-link(href="/"+locale+"/catalog/raccoonDog/") #{__("Menu_/catalog/raccoonDog/")}
+    li.nav-item
+      a.nav-link(href="/"+locale+"/catalog/toys/") #{__("Menu_/catalog/toys/")}
   each product in products
     p
       | #{product.name}
@@ -13,27 +15,3 @@ block content
       | Цена: #{product.price}
     img(src=`${product.image_url}`, class="img-fluid rounded")
     hr
-  br
-  h3 #{__("Catalog_Finnish_Fox")}
-  .row
-    .col-6
-      img(src=`https://lh3.googleusercontent.com/-pZS-X23fKag/Vq8KW1R8YjI/AAAAAAAABPI/q_HJWjggSlg/w530-h298-n/01.02.16%2B-%2B1`, class="img-fluid rounded")
-    .col-6
-      img(src=`https://lh3.googleusercontent.com/-TZk4GXcLqDc/Vq8KA6WrMFI/AAAAAAAABOI/s-Tz1-4qPH0/w530-h298-n/01.02.16%2B-%2B1`, class="img-fluid rounded")
-  .row.mt-2
-    .col-6
-      img(src=`https://lh3.googleusercontent.com/-y_v3F5BanE8/Vq8KQIPl_eI/AAAAAAAABPE/b38UTU4pGaA/w530-h298-n-rw/01.02.16%2B-%2B1`, class="img-fluid rounded")
-    .col-6
-      img(src=`https://lh3.googleusercontent.com/-6F_Lbqh_5a4/WckqKfK_OkI/AAAAAAAACpE/kLw93wnUpS4kwjN4WyK-5CT6bl-wiJZ7QCJoC/w530-h942-n/56.jpeg`, class="img-fluid rounded")
-  br
-  h3 #{__("Catalog_Russian_Fox")}
-  .row
-    .col-6
-      img(src=`https://lh3.googleusercontent.com/-g0Z3gwRoK04/WB2uLgSaZoI/AAAAAAAABSg/WmehpIa55Rkn4ZHjyAMjYC3I92mMDcjGACJoC/w424-h318-n/IMG_7742.JPG`, class="img-fluid rounded")
-    .col-6
-      img(src=`https://lh3.googleusercontent.com/-K1a-R7LNLto/WFOMWzSaNuI/AAAAAAAAB4k/RmZsa7gpeB8z9zABHaTN9wO-ODkJ6hSkgCJoC/w424-h318-n/IMG_7861.JPG`, class="img-fluid rounded")
-  .row.mt-2
-    .col-6
-      img(src=`https://lh3.googleusercontent.com/-MtKP1UNwNVE/WFu5tK2PcnI/AAAAAAAAB98/BovqMREx8mMD9Ld76r4N1nX9FqciwmWKQCJoC/w265-h353-n/8e3dca1b-20ac-4551-ba34-13ef0bee0bfd`, class="img-fluid rounded")
-    .col-6
-      img(src=`https://lh3.googleusercontent.com/-DYZ9moZW4z4/WN4r9EDAtgI/AAAAAAAACXs/66Ykl1XoqygysGN_yFKUZFMfWLYfvZNMwCJoC/w179-h318-n/5d48f539-34c1-4ff6-8843-e6ccc01946cd.jpg`, class="img-fluid rounded")

@@ -6,7 +6,7 @@ module.exports = (rep, pgp) => {
     done_orders: () =>
       rep.any(sql.done_orders),
 
-    catalog_all: () =>
-      rep.any(sql.catalog_all)
+    catalog_all: values =>
+      rep.any(sql.catalog_all, values)
   }
 };

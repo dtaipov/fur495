@@ -61,8 +61,8 @@ module.exports = {
       });
   },
 
-  getCatalogAll: (callback) => {
-    db.products.catalog_all()
+  getCatalogAll: (productGroupId, callback) => {
+    db.products.catalog_all({"product_group_id": productGroupId})
       .then((data) => {
         console.log("catalog all", data);
         callback(null, data);

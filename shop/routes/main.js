@@ -23,7 +23,17 @@ module.exports = {
   },
 
   getCatalog: (req, res) => {
-    db.getCatalogAll((err, products) => {
+    let categoryId = null;
+    const nameToId = {
+      "toys": 23,
+      "finnishFox": 9,
+      "raccoonDog": 10
+    };
+    if (nameToId.hasOwnProperty(req.params.category_id)) {
+      categoryId = nameToId[req.params.category_id];
+    }
+
+    db.getCatalogAll(categoryId, (err, products) => {
       res.render('main/catalog', {
         logged: req.isAuthenticated(),
         products,

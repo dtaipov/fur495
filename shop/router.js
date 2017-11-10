@@ -21,7 +21,7 @@ module.exports = function(a, p) {
     a.get('/:locale', main.getHome);
     a.get('/:locale/about', main.getAbout);
     a.get('/:locale/services', main.getServices);
-    a.get('/:locale/catalog', main.getCatalog);
+    a.get('/:locale/catalog/:category_id', main.getCatalog);
     a.get('/:locale/e_shops', main.getEShops);
     a.get('/:locale/done_orders', main.getDoneOrders);
     a.get('/:locale/faq', main.getFAQ);
