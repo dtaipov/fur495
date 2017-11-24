@@ -16,9 +16,12 @@ module.exports = {
   },
 
   getServices: (req, res) => {
-    res.render('main/services', {
-      logged: req.isAuthenticated(),
-      user: req.user,
+    db.getServicesToProvide((err, services) => {
+      res.render('main/services', {
+        logged: req.isAuthenticated(),
+        services,
+        user: req.user,
+      });
     });
   },
 

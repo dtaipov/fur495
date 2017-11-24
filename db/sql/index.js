@@ -56,6 +56,7 @@ module.exports = {
   products: {
     done_orders: sql('products/done_orders.sql'),
     catalog_all: sql('products/catalog_all.sql'),
+    services_to_provide: sql('products/services_to_provide.sql'),
   }
 };
 

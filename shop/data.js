@@ -61,6 +61,17 @@ module.exports = {
       });
   },
 
+  getServicesToProvide: (callback) => {
+    db.products.get_services_to_provide()
+      .then((data) => {
+        callback(null, data);
+      })
+      .catch((error) => {
+        console.error(error);
+        callback(error);
+      });
+  },
+
   getCatalogAll: (productGroupId, callback) => {
     db.products.catalog_all({"product_group_id": productGroupId})
       .then((data) => {

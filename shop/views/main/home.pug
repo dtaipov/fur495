@@ -1,6 +1,14 @@
 extends layout
 block content
-  h1 #{__("Fur_Atelier")}
+  br
+  .jumbotron
+    h1.display-3 Fur495
+    p.lead Меховое ателье в Долгопрудном
+    hr.my-4
+    p Пошив новых шуб, Полный перекрой шуб, Замена опушки на капюшоне, Пошив воротников, Продажа помпонов, Продажа меховых шкур
+    p.lead
+      form(action="/" + locale + "/services", method="get")
+        button.btn.btn-primary(type="submit") Каталог услуг
   .carousel.slide(id="carouselControls", data-ride="carousel")
     ol.carousel-indicators
       li.active(data-target="#carouselControls", data-slide-to="0")
