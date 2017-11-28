@@ -1,0 +1,24 @@
+extend layout
+block content
+  h3 #{__("Menu_" + path)}
+  .card.bg-faded
+    .card-block
+      input(id="width", type="text")
+      input(id="length", type="text")
+
+  script.
+    $(function () {
+      $("#width").slider({
+        min: 1,
+        max: 10,
+        value: 5,
+        tooltip_position: 'bottom'
+      });
+      $("#length").slider({
+        min: 30,
+        max: 80,
+        value: 70,
+        orientation: 'vertical',
+        tooltip_position: 'left'
+      });
+    });

@@ -55,6 +55,13 @@ module.exports = {
     });
   },
 
+  getTrimCalculator: (req, res) => {
+    res.render('main/trim_calculator', {
+      logged: req.isAuthenticated(),
+      user: req.user
+    });
+  },
+
   getEShops: (req, res) => {
     res.render('main/e_shops', {
       logged: req.isAuthenticated(),
