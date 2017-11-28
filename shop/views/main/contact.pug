@@ -2,9 +2,8 @@ extend layout
 block content
   h3 #{__("Menu_" + path)}
   address
-    strong Fur495.ru
-    br
-    | #{__("Contacts_Address")}
+    abbr(title=__("Contacts_Address")) A:
+    |  #{__("Contacts_Address_String")}
     br
     abbr(title=__("Contacts_Phone")) P:
     |  +7(916) 165-5272
@@ -12,6 +11,13 @@ block content
     abbr(title="Email") E:
     |  info@fur495.ru
 
+  h4 #{__("Contacts_Properties")}
+  | #{__("Contacts_Property_Organization_Name")}
+  br
+  | #{__("Contacts_Property_PSRN")}: 314504726200061
+
+  br
+  br
   h4 #{__("Contacts_E_Shops")}
   a.btn.btn-link(href="https://www.livemaster.ru/fur495" target="_blank")
     img(src="/img/livemaster.png", width="20", style="margin-right:5px")
@@ -24,10 +30,3 @@ block content
   a.btn.btn-link(href="https://www.etsy.com/shop/Fur495" target="_blank")
     img(src="/img/etsy.png", width="20", style="margin-right:5px")
     | Etsy. Fur495 Studio
-
-  br
-  br
-  h4 #{__("Contacts_Properties")}
-  | #{__("Contacts_Property_Organization_Name")}
-  br
-  | #{__("Contacts_Property_PSRN")}: 314504726200061
