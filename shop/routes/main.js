@@ -55,6 +55,13 @@ module.exports = {
     });
   },
 
+  getPaymentOptions: (req, res) => {
+    res.render('main/payment_options', {
+      logged: req.isAuthenticated(),
+      user: req.user
+    });
+  },
+
   getTrimCalculator: (req, res) => {
     res.render('main/trim_calculator', {
       logged: req.isAuthenticated(),
