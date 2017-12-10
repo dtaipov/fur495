@@ -30,7 +30,8 @@ module.exports = {
     const nameToId = {
       "toys": 23,
       "finnishFox": 9,
-      "raccoonDog": 10
+      "raccoonDog": 10,
+      "earmuffs": 3
     };
     if (nameToId.hasOwnProperty(req.params.category_id)) {
       categoryId = nameToId[req.params.category_id];
