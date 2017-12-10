@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2017-12-10 17:22">
+    <shop>
+    <name>Fur495</name>
+    <company>ИП Таипов Дмитрий Амирович</company>
+    <url>http://fur495.ru</url>
+    <currencies>
+      <currency id="RUR" rate="1"/>
+      <currency id="USD" rate="60"/>
+    </currencies>
+    <categories>Все товары/Одежда, обувь и аксессуары/Женская одежда//
+      <category id="1">Аксессуары</category>
+      <category id="3" parentId="1">Головные уборы</category>
+    </categories>
+    <delivery-options>
+      <option cost="300" days="2" order-before="18"/>
+    </delivery-options>
+    <cpa>1</cpa>
+    <offers>
+      <offer id="50" available="true">
+        <url>http://www.fur495.ru/ru/products/50</url>
+        <price>3500</price>
+        <oldprice>4400</oldprice>
+        <currencyId>RUR</currencyId>
+        <categoryId>3</categoryId>
+        <picture>https://lh3.googleusercontent.com/-Sbwha3aZT7M/WhuoPMF0tqI/AAAAAAAADHE/zsO5qryped8SE9_NsPJ3n5wnGfRT9lfGQCJoC/w530-h354-n/%25D0%25BD%25D0%25B0%25D1%2583%25D1%2588%25D0%25BD%25D0%25B8%25D0%25BA%25D0%25B8%25D0%25A0%25D0%25B5%25D0%25BA%25D1%2581.jpg</picture>
+        <store>false</store>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+        <delivery-options>
+          <option cost="300" days="0" order-before="12"/>
+        </delivery-options>
+        <name>Наушники из Кролика Рекс Орилаг. Цвет Шиншилла.</name>
+        <vendor>Fur495</vendor>
+        <description>
+        <![CDATA[
+          <p>Очень теплые и приятные на ощупь!<br>
+          Внутренняя сторона наушников сделана из того же меха, что и внешняя сторона.
+          Швы не заметны, смотрятся как цельные!<br>
+          Размер регулируется - дужка убирается внутрь уха.<br>
+          </p>
+        ]]>
+        </description>
+        <param name="Цвет">серый</param>
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <country_of_origin>Россия</country_of_origin>
+        <rec>192</rec>
+      </offer>
+      <offer id="192" available="true">
+        <url>http://www.fur495.ru/ru/products/192</url>
+        <price>3500</price>
+        <oldprice>4400</oldprice>
+        <currencyId>RUR</currencyId>
+        <categoryId>3</categoryId>
+        <picture>https://instagram.fiev2-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/25014517_530802337282630_4579174911292997632_n.jpg</picture>
+        <store>false</store>
+        <pickup>true</pickup>
+        <delivery>true</delivery>
+        <delivery-options>
+          <option cost="300" days="1" order-before="18"/>
+        </delivery-options>
+        <name>Наушники из Кролика Рекс Орилаг. Цвет Кастор.</name>
+        <vendor>Fur495</vendor>
+        <description>
+          <![CDATA[
+          <p>Очень теплые и приятные на ощупь!<br>
+          Внутренняя сторона наушников сделана из того же меха, что и внешняя сторона.
+          Швы не заметны, смотрятся как цельные!<br>
+          Размер регулируется - дужка убирается внутрь уха.<br>
+          </p>
+        ]]>
+        </description>
+        <param name="Цвет">коричневый</param>
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <country_of_origin>Россия</country_of_origin>
+        <rec>50</rec>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
