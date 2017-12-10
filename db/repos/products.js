@@ -10,6 +10,9 @@ module.exports = (rep, pgp) => {
       rep.any(sql.services_to_provide),
 
     catalog_all: values =>
-      rep.any(sql.catalog_all, values)
+      rep.any(sql.catalog_all, values),
+
+    product_by_id: values =>
+      rep.one(sql.product_by_id, values)
   }
 };

@@ -83,6 +83,18 @@ module.exports = {
         callback(error);
       });
   },
+
+  getProductById: (productId, callback) => {
+    db.products.product_by_id({"product_id": productId})
+      .then((data) => {
+        console.log("product", data);
+        callback(null, data);
+      })
+      .catch((error) => {
+        console.error(error);
+        callback(error);
+      });
+  },
   
     // Get featured products
     getFeatured: function(callback) {

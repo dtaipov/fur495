@@ -16,4 +16,7 @@ block content
       br
       | Цена: #{product.price}
     img(src=`${product.image_url}`, class="img-fluid rounded")
+    ul.nav
+      li.nav-item
+      a.nav-link(href=`/${locale}/products/${product.id}`) Подробнее
     hr

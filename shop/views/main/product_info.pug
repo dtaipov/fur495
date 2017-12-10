@@ -1,0 +1,6 @@
+extend layout
+block content
+  h1 #{product.name}
+  img.img-fluid.rounded(src=`${product.image_url}`)
+  p Цена: #{product.price}
+  button.btn.btn-primary(disabled) Купить

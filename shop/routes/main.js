@@ -46,6 +46,21 @@ module.exports = {
     });
   },
 
+  getProduct: (req, res) => {
+    let productId = req.params.product_id;
+    if (isNaN(productId)) {
+      productId = -1; // trying to avoid sql injections
+    }
+
+    db.getProductById(productId, (err, product) => {
+      res.render('main/product_info', {
+        logged: req.isAuthenticated(),
+        product,
+        user: req.user,
+      });
+    });
+  },
+
   getDoneOrders: (req, res) => {
     db.getDoneOrders((err, doneOrders) => {
       res.render('main/done_orders', {
