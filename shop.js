@@ -67,7 +67,7 @@ app.use((req, res) => {
 
 // Listen for requests
 const port = process.env.PORT || 5001;
-app.listen(port);
+app.listen(port, '0.0.0.0');
 
 console.log('NodeShop v' + info.version + ' listening on port ' + port);
 
