@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const passport = require('passport');
+var session = require('express-session')
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const i18n = require('i18n');
@@ -26,6 +27,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.locals.env = process.env;
 
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
 app.use(passport.initialize());
 app.use(passport.session());
 
